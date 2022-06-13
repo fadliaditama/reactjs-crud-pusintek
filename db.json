@@ -13,22 +13,10 @@
       "jumlah_anggaran": 60000
     },
     {
-      "id": 3,
       "nama_anggaran": "Teknologi",
       "penanggung_jawab": "Dhiya",
-      "jumlah_anggaran": 70000
-    },
-    {
-      "nama_anggaran": "1",
-      "penanggung_jawab": "3",
-      "jumlah_anggaran": "5",
-      "id": 4
-    },
-    {
-      "nama_anggaran": "111111",
-      "penanggung_jawab": "3",
-      "jumlah_anggaran": "3333",
-      "id": 5
+      "jumlah_anggaran": "80000",
+      "id": 3
     }
   ]
 }

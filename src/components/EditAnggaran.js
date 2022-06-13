@@ -25,7 +25,7 @@ const EditAnggaran = () => {
         e.preventDefault();
         const anggaran = { nama_anggaran, penanggung_jawab, jumlah_anggaran };
         await fetch(`http://localhost:8080/anggaran/${id}`, {
-            method: "PATCH",
+            method: "PUT",
             body: JSON.stringify(anggaran),
             headers:{
                 'Content-Type': 'application/json'

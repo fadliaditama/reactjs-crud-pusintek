@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
 const AnggaranList = () => {
-    const [anggaran, setNamaAnggaran] = useState([]);
+    const [anggaran, setAnggaran] = useState([]);
 
     useEffect(() => {
         fecthData();
@@ -12,7 +12,7 @@ const AnggaranList = () => {
     const fecthData = async() =>{
         const response = await fetch('http://localhost:8080/anggaran');
         const data = await response.json();
-        setNamaAnggaran(data);
+        setAnggaran(data);
     }
 
     const deleteAnggaran = async(id) => {
