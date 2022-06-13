@@ -19,15 +19,15 @@
       "jumlah_anggaran": 70000
     },
     {
-      "id": 4,
-      "nama_anggaran": "Pertambangan",
-      "penanggung_jawab": "Haikal",
-      "jumlah_anggaran": 80000
+      "nama_anggaran": "1",
+      "penanggung_jawab": "3",
+      "jumlah_anggaran": "5",
+      "id": 4
     },
     {
-      "nama_anggaran": "a",
-      "penanggung_jawab": "s",
-      "jumlah_anggaran": "3",
+      "nama_anggaran": "111111",
+      "penanggung_jawab": "3",
+      "jumlah_anggaran": "3333",
       "id": 5
     }
   ]

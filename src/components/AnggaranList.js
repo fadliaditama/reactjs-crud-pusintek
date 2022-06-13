@@ -23,6 +23,7 @@ const AnggaranList = () => {
             }
         });
         fecthData();
+        alert("Data telah terhapus");
     }
   return (
     <div className='container mx-auto py-10'>
@@ -31,9 +32,9 @@ const AnggaranList = () => {
     </div>
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table className="w-full text-sm text-left text-gray-500 ">
-                <thead className="text-xs text-white uppercase bg-slate-800 ">
+                <thead className="text-xs text-white uppercase bg-black ">
                     <tr>
-                    <th scope="col" className="px-6 py-3">
+                        <th scope="col" className="px-6 py-3">
                             No.
                         </th>
                         <th scope="col" className="px-6 py-3">
@@ -45,14 +46,14 @@ const AnggaranList = () => {
                         <th scope="col" className="px-6 py-3">
                             Jumlah Anggaran
                         </th>
-                        <th scope="col" className="px-6 py-3">
-                            <span className="sr-only">Edit</span>
+                        <th scope="col" className="text-right px-12">
+                            Aksi
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                 { anggaran.map((anggaran,index) =>(
-                    <tr className="bg-slate-500 text-white border-b  hover:bg-gray-700" key={anggaran.id}>
+                    <tr className="bg-slate-800 text-white border-b hover:bg-gray-700" key={anggaran.id}>
                         <td className="px-6 py-3">
                             { index + 1 }
                         </td>
@@ -66,8 +67,8 @@ const AnggaranList = () => {
                             {anggaran.jumlah_anggaran}
                         </td>
                         <td className="px-6 py-4 text-right">
-                            <Link to={`edit-anggaran/${anggaran.id}`} className="font-medium text-blue-600 dark:text-blue-500 hover:underline px-5">Edit</Link>
-                            <button onClick={ () => deleteAnggaran(anggaran.id) } className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Hapus</button>
+                            <Link to={`edit-anggaran/${anggaran.id}`} className="font-medium text-blue-600 hover:underline px-5">Edit</Link>
+                            <button onClick={ () => deleteAnggaran(anggaran.id) } className="font-medium text-red-600 hover:underline">Hapus</button>
                         </td>
                     </tr>
                 ))}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const AddAnggaran = () => {
     const [nama_anggaran, setNamaAnggaran] = useState('');
@@ -18,7 +19,8 @@ const AddAnggaran = () => {
                 'Content-Type': 'application/json'
             }
         });
-        navigate("/list-anggaran")
+        navigate("/list-anggaran");
+        alert("Data berhasil ditambahkan!");
     }
 
   return (
@@ -27,20 +29,21 @@ const AddAnggaran = () => {
             <div className="grid xl:grid-cols-2 xl:gap-6 pt-10">
                 <div className="relative z-0 w-full mb-6 group">
                     <input type="text" name="nama_anggaran" id="nama_anggaran" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value={nama_anggaran} onChange={ (e) => setNamaAnggaran(e.target.value) } required />
-                    <label for="nama_anggaran" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nama Anggaran</label>
+                    <label htmlFor="nama_anggaran" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nama Anggaran</label>
                 </div>
                 <div className="relative z-0 w-full mb-6 group">
                     <input type="text" name="penanggung_jawab" id="penanggung_jawab" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value={penanggung_jawab} onChange={ (e) => setPenanggungJawab(e.target.value) } required />
-                    <label for="penanggung_jawab" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Penanggung Jawab</label>
+                    <label htmlFor="penanggung_jawab" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Penanggung Jawab</label>
                 </div>
             </div>
             <div className="grid xl:grid-cols-2 xl:gap-6">
                 <div className="relative z-0 w-full mb-6 group">
                     <input type="text" name="jumlah_anggaran" id="jumlah_anggaran" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value={jumlah_anggaran} onChange={ (e) => setJumlahAnggaran(e.target.value) } required />
-                    <label for="jumlah_anggaran" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Jumlah Anggaran</label>
+                    <label htmlFor="jumlah_anggaran" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Jumlah Anggaran</label>
                 </div>
             </div>
-            <button className='text-white bg-blue-700 rounded px-2 py-2'>Tambah Data</button>
+            <button className='text-white bg-blue-700 rounded px-2 py-2 m-1'>Tambah Data</button>
+            <Link to="/list-anggaran" className='text-white bg-yellow-500 rounded px-2 py-2 inline-block'>Kembali</Link>           
         </form>
     </div>
   )
