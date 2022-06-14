@@ -27,9 +27,12 @@ const AnggaranList = () => {
     }
   return (
     <div className='container mx-auto py-10'>
-    <div className='pb-2'>
-        <Link to='/add-anggaran' className='bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded'>Tambah Data</Link>
-    </div>
+        <div className='pb-10'>
+            <h1 className='text-center font-bold text-2xl uppercase'>Daftar Dana Anggaran</h1>
+        </div>
+        <div className='pb-3'>
+            <Link to='/add-anggaran' className='bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded'>Tambah Data</Link>
+        </div>
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table className="w-full text-sm text-left text-gray-500 ">
                 <thead className="text-xs text-white uppercase bg-black ">
